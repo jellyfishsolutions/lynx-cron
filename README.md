@@ -13,7 +13,7 @@ Usual http errors code, like 400 or 500, can be used to signal an error. In this
 case, the job will be rescheduled, until the maximum number of retry is reached,
 or if its status code is 200.
 
-### Note
+### Notes
 
 This CronModule implementation can be only used in an environment where the
 lynx application is executed as a single instance. Otherwise, each job could be
@@ -55,3 +55,11 @@ A job can be registered using the `addJob` method:
 ```
 cronModule.addJob('00 30 11 * * 1-5', 'http://localhost:3000/jobs/invoices?authkey=123123123');
 ```
+
+End, in the same way, a job can be deleted using the `removeJob` method:
+
+```
+cronModule.removeJob('00 30 11 * * 1-5', 'http://localhost:3000/jobs/invoices?authkey=123123123');
+```
+
+By default, each registered job is saved in the db, using the `CronJobEntity`. In this way, a cron job can survive multiple crash or restart of the lynx app.
