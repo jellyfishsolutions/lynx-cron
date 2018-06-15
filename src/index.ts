@@ -27,12 +27,15 @@ export default class CronModule extends SimpleModule {
     constructor() {
         super();
         CronModule.self = this;
-        setTimeout(() => this.rebuildJobs(), 5000);
     }
 
-    public mount(config: Config) {
-        super.mount(config);
-        config.db.entities.unshift(__dirname + "/entities/*.entity.js");
+    public get entities() {
+        return __dirname + "/entities";
+    }
+
+    public onDatabaseConnected() {
+        super.onDatabaseConnected();
+        this.rebuildJobs();
     }
 
     /**
