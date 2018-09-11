@@ -63,3 +63,8 @@ cronModule.removeJob('00 30 11 * * 1-5', 'http://localhost:3000/jobs/invoices?au
 ```
 
 By default, each registered job is saved in the db, using the `CronJobEntity`. In this way, a cron job can survive multiple crash or restart of the lynx app.
+
+
+## Help
+Useful site to check the cron date:
+https://crontab.guru/
