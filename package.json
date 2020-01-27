@@ -1,8 +1,7 @@
 {
     "name": "lynx-cron",
-    "version": "0.1.1",
-    "description":
-        "the lynx-cron adds cron features for the lynx-framework. This module should be used only in single-instances production environment",
+    "version": "1.0.0",
+    "description": "the lynx-cron adds cron features for the lynx-framework. This module should be used only in single-instances production environment",
     "main": "dist/index.js",
     "scripts": {
         "build": "gulp build",
@@ -14,7 +13,11 @@
         "type": "git",
         "url": "git+https://github.com/jellyfishsolutions/lynx-cron.git"
     },
-    "keywords": ["lynx", "cron", "module"],
+    "keywords": [
+        "lynx",
+        "cron",
+        "module"
+    ],
     "author": "Luca Roverelli <luca.roverelli@gmail.com>",
     "license": "Apache-2.0",
     "bugs": {
@@ -23,16 +26,15 @@
     "homepage": "https://github.com/jellyfishsolutions/lynx-cron#readme",
     "dependencies": {
         "@types/cron": "^1.3.0",
-        "axios": "^0.18.0",
-        "cron": "^1.3.0",
-        "lynx-framework": "^0.2.7"
+        "axios": "^0.19.2",
+        "cron": "^1.8.2",
+        "lynx-framework": "^1.0.1"
     },
     "devDependencies": {
-        "gulp": "^3.9.1",
-        "gulp-clean": "^0.4.0",
-        "gulp-tsc": "^1.3.2",
-        "gulp-watch": "^5.0.0",
-        "run-sequence": "^2.2.1",
-        "typescript": "^2.9.1"
+        "del": "^5.1.0",
+        "gulp": "^4.0.2",
+        "gulp-typescript": "^6.0.0-alpha.1",
+        "merge2": "^1.3.0",
+        "typescript": "^3.7.5"
     }
 }

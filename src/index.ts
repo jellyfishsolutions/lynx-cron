@@ -1,5 +1,4 @@
 import SimpleModule from "lynx-framework/simple.module";
-import Config from "lynx-framework/config";
 import { logger } from "lynx-framework/logger";
 
 import CronJobEntity from "./entities/cronjob.entity";
@@ -44,7 +43,7 @@ export default class CronModule extends SimpleModule {
      * with the when parameter.
      * @param when the standard cron date definition, supporting *
      * @param endpoint the GET endpoint that will be executed.
-     * @param retry number of the retry if the job faild (default: 5 times).
+     * @param retry number of the retry if the job failed (default: 5 times).
      */
     public addJob(
         when: string,
