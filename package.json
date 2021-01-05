@@ -26,7 +26,7 @@
     "homepage": "https://github.com/jellyfishsolutions/lynx-cron#readme",
     "dependencies": {
         "@types/cron": "^1.3.0",
-        "axios": "^0.19.2",
+        "axios": "^0.21.1",
         "cron": "^1.8.2",
         "lynx-framework": "^1.0.1"
     },
